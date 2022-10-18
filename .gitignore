@@ -22,3 +22,6 @@
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 /TareaProg2/build/
+/TareaProg2/main/build/
+/TareaProg2/Monedas/nbproject/private/
+/TareaProg2/main/src/Monedas/nbproject/private/
