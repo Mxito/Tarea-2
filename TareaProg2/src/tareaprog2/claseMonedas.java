@@ -1,9 +1,9 @@
 
 package tareaprog2;
 
-class moneda{
+class Moneda{
     private final int valor;
-    public moneda(int n){
+    public Moneda(int n){
         valor = n;
     }
     public int getValor(){
@@ -11,20 +11,20 @@ class moneda{
     }
 }
 
-class moneda100 extends moneda{
-    public moneda100(){
+class Moneda100 extends Moneda{
+    public Moneda100(){
         super(100);
     }
 }
 
-class moneda500 extends moneda{
-    public moneda500(){
+class Moneda500 extends Moneda{
+    public Moneda500(){
         super(500);
     }
 }
 
-class moneda1000 extends moneda{
-    public moneda1000(){
+class Moneda1000 extends Moneda{
+    public Moneda1000(){
         super(1000);
     }
 }
