@@ -4,17 +4,13 @@ import java.util.ArrayList;
 
 class Deposito{
     private ArrayList<Bebida> D;
-    private final int precio;
-    private int vuelto;
     public Deposito(){
       D = new ArrayList<>();
-      precio = 1000;
-      vuelto = 0;
     }
     public void addBebida(Bebida a){
         D.add(a);
     }
-    public Bebida getBebida(Moneda m) throws customException{
+    public Bebida getBebida(Moneda m, int precio, int vuelto) throws customException{
         if(D.isEmpty()){
             return null;
         }
