@@ -10,8 +10,8 @@ public class TareaProg2 {
     Moneda1000 escudo = new Moneda1000();
     Comprador mbappe = new Comprador(escudo, 2, exp);
     
-   
+    
     
     }
-   
+    
 }

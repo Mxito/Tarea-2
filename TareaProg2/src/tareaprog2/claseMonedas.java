@@ -9,12 +9,9 @@ class Moneda{
     public int getValor(){
         return valor;
     }
-    public String getSerie(){
-        String serie = " ";
-        return serie;
+    public String toStringMoneda(){
+        return "Valor: "+valor+"\nSerie:"+this.toString()+"\n";
     }
-
-    
 }
 
 class Moneda100 extends Moneda{
