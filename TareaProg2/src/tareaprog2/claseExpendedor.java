@@ -6,11 +6,14 @@ class Expendedor {
     private ArrayList<Deposito> D;
     private int precio;
     private int vuelto;
-    public Expendedor(int n, int price){
-        precio = price;
+    public Expendedor(int numBebidas, int precioUnico){
+        precio = precioUnico;
         vuelto = 0;
         D = new ArrayList<>(3);
-        for(int i = 0; i < n; i++){
+        D.add(new Deposito());
+        D.add(new Deposito());
+        D.add(new Deposito());
+        for(int i = 0; i < numBebidas; i++){
             D.get(0).addBebida(new Fanta(1000+i));
             D.get(1).addBebida(new Sprite(2000+i));
             D.get(2).addBebida(new CocaCola(3000+i));

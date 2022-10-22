@@ -4,12 +4,9 @@ class Comprador{
     private Moneda moneda;
     private int bebida;
     
-    public Comprador(Moneda coin, int cualBebida){
+    public Comprador(Moneda coin, int cualBebida, Expendedor maquina){
         moneda=coin;
         bebida = cualBebida;
-    }
-    public void comprarBebida(){
-        
     }
     public int cuantoVuelto(){
       return 1;  
