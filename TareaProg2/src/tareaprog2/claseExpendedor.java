@@ -24,27 +24,27 @@ class Expendedor {
             throw new customException("PagoIncorrectoException");
         }
         if(numero == 1){
-            if(D.isEmpty()){
-               vuelto = m.getValor();
-               throw new customException("NoHayBebidaException");
-            }
-            return D.get(0).getBebida(m, precio, vuelto);
+            return D.get(0).getBebida(m, precio);
         }
         if(numero == 2){
-            if(D.isEmpty()){
-               vuelto = m.getValor();
-               throw new customException("NoHayBebidaException");
-            }
-            return D.get(1).getBebida(m, precio, vuelto);
+            return D.get(1).getBebida(m, precio);
         }
         if(numero == 3){
-            if(D.isEmpty()){
-               vuelto = m.getValor();
-               throw new customException("NoHayBebidaException");
-            }
-            return D.get(3).getBebida(m, precio, vuelto);
+            return D.get(2).getBebida(m, precio);
         }
         throw new customException("NoHayBebidaException");
+    }
+    public int valorVuelto(int n){
+        if(n == 1){
+            vuelto = D.get(0).darVuelto();
+        }
+        if(n == 2){
+            vuelto = D.get(1).darVuelto();
+        }
+        if(n == 3){
+            vuelto = D.get(2).darVuelto();
+        }
+        return vuelto;
     }
     public Moneda getVuelto(){
         if(vuelto > 0){
