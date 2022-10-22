@@ -13,7 +13,7 @@ class DepositoMonedas {
     public Moneda removeMoneda(){
         return M.remove(0);
     }
-    public int elemento(int i){
-        return M.get(i).getValor();
+    public ArrayList getDMonedas(){
+        return M;
     }
 }

@@ -1,30 +1,28 @@
 package tareaprog2;
 
 class Comprador{
-    private DepositoMonedas m;
+    private DepositoMonedas Cartera;
     private Bebida bebida;
-    private int vuelto;
+    private int vueltoPendiente;
     public Comprador(Moneda coin, int cualBebida, Expendedor maquina) throws customException{
-        m = new DepositoMonedas();
-        m.addMoneda(coin);
-        bebida = maquina.comprarBebida(m.removeMoneda(), cualBebida);
-        vuelto = maquina.valorVuelto(cualBebida);
-        for(int i = vuelto; i > 0; i-=100){
-            m.addMoneda(maquina.getVuelto());
+        Cartera = new DepositoMonedas();
+        Cartera.addMoneda(coin);
+        bebida = maquina.comprarBebida(Cartera.removeMoneda(), cualBebida);
+        vueltoPendiente = maquina.valorVuelto(cualBebida);
+        for(int i = vueltoPendiente; i > 0; i-=100){
+            Cartera.addMoneda(maquina.getVuelto());
         }
+        vueltoPendiente = 0;
     }
     public String beber(){
-        return "Bebiendo: "+bebida.tipoBebida()+"\n";
+        Bebida aux = bebida;
+        bebida = null;
+        return "Bebiendo: "+aux.tipoBebida()+"\nNumero de Serie: "+aux.getSerie()+"\n";
     }
     public void cuantoVuelto(){
-        int cont = 0;
-        while(vuelto > 0){
-            vuelto -=100;
-            System.out.println(m.elemento(cont));
-            cont ++;
-        }
-        if(vuelto == 0){
-            System.out.println("null");
+        int cont = Cartera.getDMonedas().size();
+        for (int i = cont; i > 0; i--){
+            System.out.println("100");
         }
     }
 }

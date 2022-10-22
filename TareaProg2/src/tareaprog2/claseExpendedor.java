@@ -5,10 +5,10 @@ import java.util.ArrayList;
 class Expendedor {
     private ArrayList<Deposito> D;
     private int precio;
-    private int vuelto;
+    private int vueltoTotal;
     public Expendedor(int numBebidas, int precioUnico){
         precio = precioUnico;
-        vuelto = 0;
+        vueltoTotal = 0;
         D = new ArrayList<>(3);
         D.add(new Deposito());
         D.add(new Deposito());
@@ -36,19 +36,19 @@ class Expendedor {
     }
     public int valorVuelto(int n){
         if(n == 1){
-            vuelto = D.get(0).darVuelto();
+            vueltoTotal = D.get(0).darVuelto();
         }
         if(n == 2){
-            vuelto = D.get(1).darVuelto();
+            vueltoTotal = D.get(1).darVuelto();
         }
         if(n == 3){
-            vuelto = D.get(2).darVuelto();
+            vueltoTotal = D.get(2).darVuelto();
         }
-        return vuelto;
+        return vueltoTotal;
     }
     public Moneda getVuelto(){
-        if(vuelto > 0){
-            vuelto -= 100;
+        if(vueltoTotal > 0){
+            vueltoTotal -= 100;
             return new Moneda100();
         }
         return null;

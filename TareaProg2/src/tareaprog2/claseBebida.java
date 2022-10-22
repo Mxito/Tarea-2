@@ -9,13 +9,13 @@ abstract class Bebida{
     public int getSerie() {
         return serie;
     }
-
 }
 
 class CocaCola extends Bebida{
     public CocaCola(int numSerie){
         super(numSerie);
     }
+    @Override
     public String tipoBebida(){
         return "Coca-Cola";
     }
