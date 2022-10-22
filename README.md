@@ -1,6 +1,6 @@
 # Tarea-2
-Ivan Zapata Avila
+Ivan Zapata Avila (GrxmmLaw)
 
-Vicente Cuello Diban
+Vicente Cuello Diban (Vicente Cuello)
 
-Maximiliano Lopez Becerra
+Maximiliano Lopez Becerra (Mxito)
